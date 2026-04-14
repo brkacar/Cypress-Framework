@@ -3,7 +3,7 @@
 import { LoginPage } from "../../support/pageObjects/loginPage";
 import { ProductPage } from "../../support/pageObjects/productsPage";
 
-describe('Validare adaugare in cos', ()=>{
+describe('add item to cart', ()=>{
 
     let loginPage = new LoginPage()
     let productsPage = new ProductPage();
@@ -19,6 +19,6 @@ describe('Validare adaugare in cos', ()=>{
         cy.loginToSauceDemo('standard_user', 'secret_sauce')
         productsPage.addBackPackToCart();
         productsPage.verifyBackPackRemoveButtonAppears();
-        productsPage.elements.cartBadge().should('have.text', '1');
+        productsPage.elements.cartBadge().should('have.text', '2');
     })
 })

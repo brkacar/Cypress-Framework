@@ -13,7 +13,6 @@ describe('Validate login', ()=>{
     })
 
     it('valid login',()=>{
-        cy.visit('https://www.saucedemo.com/');
         loginPage.enterUsername('standard_user');
         loginPage.enterPassword('secret_sauce');
         loginPage.clickLoginButton();
