@@ -1,0 +1,48 @@
+# Node modules
+node_modules/
+
+# Cypress output
+cypress/screenshots/
+cypress/videos/
+
+# Cypress configuration files
+cypress.json
+cypress.env.json
+
+# Log files
+*.log
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.vscode/
+.idea/
+
+# Environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# NPM package lock file
+package-lock.json
+
+# Optional: Yarn lock file (if using Yarn)
+yarn.lock
+
+# Output directory (if you use one for build results)
+dist/
+build/
+
+# Coverage directory (if using code coverage tools like Istanbul/nyc)
+coverage/
+
+# Temporary files
+tmp/
+temp/
+
+# Cypress plugins
+cypress/plugins/
