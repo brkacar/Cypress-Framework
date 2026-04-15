@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl: 'https://www.saucedemo.com/',
+    baseUrl: 'https://www.saucedemo.com',
     reporter: 'mochawesome',
     reporterOptions: {
       reportDir: 'cypress/reports', // Directory to save reports

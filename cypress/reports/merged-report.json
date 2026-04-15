@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2026-04-15T07:36:16.814Z",
+    "end": "2026-04-15T07:36:30.743Z",
+    "duration": 13929
+  },
+  "results": [
+    {
+      "uuid": "c314818e-20de-4e02-aeb2-57635df00877",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SauceDemoTests\\login.cy.js",
+      "file": "cypress\\e2e\\SauceDemoTests\\login.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3ad60907-a1c2-4e3e-ade5-cb862f0b823e",
+          "title": "Login test",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with correct credentials",
+              "fullTitle": "Login test Login with correct credentials",
+              "timedOut": null,
+              "duration": 3754,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage.enterUsername('standard_user');\nloginPage.enterPassword('secret_sauce');\nloginPage.clickLoginButton();\nproductsPage.cartButtonExists();",
+              "err": {},
+              "uuid": "ca2fe519-e0c4-44b8-964c-8bc2eb4ef09a",
+              "parentUUID": "3ad60907-a1c2-4e3e-ade5-cb862f0b823e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with incorrect credentials",
+              "fullTitle": "Login test Login with incorrect credentials",
+              "timedOut": null,
+              "duration": 1828,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.visit('https://www.saucedemo.com/');\n// loginPage.enterUsername('standard_user');\n// loginPage.enterPassword('secret_sauce_wrong');\n// loginPage.clickLoginButton();\ncy.loginToSauceDemo('standard_user', 'secret_sauce_wrong');\nloginPage.errorMessageExists();",
+              "err": {},
+              "uuid": "3913c79f-00aa-4360-a351-85d2831571d6",
+              "parentUUID": "3ad60907-a1c2-4e3e-ade5-cb862f0b823e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ca2fe519-e0c4-44b8-964c-8bc2eb4ef09a",
+            "3913c79f-00aa-4360-a351-85d2831571d6"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "b6c2a5ac-2e3a-4da4-b4b7-c8f0d22b112a",
+      "title": "",
+      "fullFile": "cypress\\e2e\\SauceDemoTests\\products.cy.js",
+      "file": "cypress\\e2e\\SauceDemoTests\\products.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2e124a7f-b017-4078-8b92-efa8440c1d6f",
+          "title": "add item to cart",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add item to cart",
+              "fullTitle": "add item to cart add item to cart",
+              "timedOut": null,
+              "duration": 2958,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.loginToSauceDemo('standard_user', 'secret_sauce');\nproductsPage.addBackPackToCart();\nproductsPage.verifyBackPackRemoveButtonAppears();\nproductsPage.elements.cartBadge().should('have.text', '1');",
+              "err": {},
+              "uuid": "f7a6dcae-a01d-4f4e-a7be-509d512609ce",
+              "parentUUID": "2e124a7f-b017-4078-8b92-efa8440c1d6f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7a6dcae-a01d-4f4e-a7be-509d512609ce"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2958,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report-[name]-[datetime]",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.4"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": true,
+        "html": true,
+        "json": true,
+        "reportFilename": "report-[name]-[datetime]",
+        "timestamp": "mmddyyyy_HHMMss",
+        "charts": true,
+        "embeddedScreenshots": true
+      },
+      "version": "6.3.2"
+    }
+  }
+}

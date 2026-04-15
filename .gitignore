@@ -46,3 +46,9 @@ temp/
 
 # Cypress plugins
 cypress/plugins/
+
+# Cypress reports assets (if you generate them)
+cypress/reports/assets/
+cypress/reports/merged-html-report/assets
+cypress/reports/report*
+

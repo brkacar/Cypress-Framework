@@ -19,6 +19,6 @@ describe('add item to cart', ()=>{
         cy.loginToSauceDemo('standard_user', 'secret_sauce')
         productsPage.addBackPackToCart();
         productsPage.verifyBackPackRemoveButtonAppears();
-        productsPage.elements.cartBadge().should('have.text', '2');
+        productsPage.elements.cartBadge().should('have.text', '1');
     })
 })

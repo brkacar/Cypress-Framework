@@ -29,6 +29,6 @@ import { LoginPage } from "./pageObjects/loginPage"
 
 Cypress.Commands.add('loginToSauceDemo', (username, password)=>{
     const loginPage = new LoginPage();
-    cy.visit('');
+    cy.visit('/');
     loginPage.login(username, password)
 })

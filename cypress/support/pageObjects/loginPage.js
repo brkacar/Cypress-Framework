@@ -1,27 +1,27 @@
 /// <reference types="cypress" />
 export class LoginPage {
 
-    loginPageElemenets ={
-        userNameInput: ()=> cy.get('[data-test="username"]'),
-        passwordInput: ()=> cy.get('[data-test="password"]'),
+    loginPageElements ={
+        userNameInput: ()=> cy.get('#user-name'),
+        passwordInput: ()=> cy.get('#password'),
         loginButton: () => cy.get('[data-test="login-button"]'),
         errorMessage: ()=> cy.get('[data-test="error"]'),
     };
 
     errorMessageExists(){
-        this.loginPageElemenets.errorMessage().should('be.visible');
+        this.loginPageElements.errorMessage().should('be.visible');
     }
 
     enterUsername(username){
-        this.loginPageElemenets.userNameInput().type(username);
+        this.loginPageElements.userNameInput().type(username);
     }
 
     enterPassword(password){
-        this.loginPageElemenets.passwordInput().type(password)
+        this.loginPageElements.passwordInput().type(password)
     }
 
     clickLoginButton(){
-        this.loginPageElemenets.loginButton().click()
+        this.loginPageElements.loginButton().click()
     }
 
     login(username, password){
